@@ -1,0 +1,58 @@
+.home{
+    background-image: url(../img/header-img.png);
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+    display: flex; 
+    flex-direction: row;
+    font-size:70%;
+}
+.home__h1{
+    font:{
+        family: Raleway;
+        style:heavy;
+        size: 4rem;
+         }
+}
+.home__p{
+    @include raleway_light;
+    font-size:1.2rem;
+    text-shadow: 0.5px 0.5px white;
+    }
+
+.home__button{
+    @include raleway_light;
+    font-size: 1.15rem;
+    border: none;
+    background-color: $orange;
+    box-shadow: 3px 3px 10px grey;
+    width: 55%;
+    height: 3rem;
+    color: white;
+}
+.home__img-a{
+    position: absolute;
+    top:90vh;
+    left:50%;
+
+}
+.home__img{
+height: 2.5rem;    
+}
+@include media-breakpoint-down(lg){
+    .home__info{text-align: center;}
+    .home__h1{font-size:4.2rem;}
+    .home__p{font-size: 1.3rem;}
+    .home__button{
+        font-size: 1.4rem;
+        width:65%;
+    }
+}
+@include media-breakpoint-down(md){
+    .home__img{
+        height: 3.5rem;
+    }
+}

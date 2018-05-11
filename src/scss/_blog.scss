@@ -1,0 +1,111 @@
+.blog{
+    background-color: $blog-bg;
+}
+.blog__h1{
+    text-align: center;
+    font:{
+        size:5,625rem;
+        weight:800;
+        family: raleway;
+        }
+    color:white;
+    margin-top: 3rem;
+}
+.blog__p{
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    margin-top:1.5rem;
+    margin-bottom: 3rem;
+}
+.blog__post{
+    padding-left: 1rem;
+    padding-right: 1rem;
+     min-height:20rem;
+}
+#post__1{
+    background:linear-gradient(to bottom, rgba(255,255,255,0)30% ,rgba(0,0,0,0.9) ), url(../img/post-bg-1.png);
+    @include post_bg;
+}
+#post__2{
+    background:linear-gradient(to bottom, rgba(255,255,255,0)30% ,rgba(0,0,0,0.9) ), url(../img/post-bg-2.png);
+    @include post_bg;
+}
+#post__3{
+    background:linear-gradient(to bottom, rgba(255,255,255,0)30% ,rgba(0,0,0,0.9) ), url(../img/post-bg-3.png);
+    @include post_bg;
+}
+.post__date{
+    font:{
+        size:1.4rem;
+        weight:800;;
+        family:raleway;
+    }
+    color:white;
+    border-radius: 5px;
+    background-color: rgba(38, 38, 38, 0.5);
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    line-height: 100%;
+    padding: 0.4rem;
+    left: 2rem;
+    top:1rem;
+}
+.post__title{
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+.post__footer{
+   font-size: 0.81rem;
+    color: white;
+    padding-left:1rem;
+    padding-right: 1rem;
+    position: absolute;
+    bottom: 0.5rem;
+}
+.blog__button{
+    background-color:$blog-button-color;
+    border: none;
+    color: white;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+    @include raleway_light;
+}
+@include media-breakpoint-between(xs,md){
+    .blog__post{
+        padding-:0;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
+@include media-breakpoint-only(sm){
+    .blog__post{
+        min-height: 30rem;
+    }
+}
+@include media-breakpoint-only(md){
+    .blog__post{
+        min-height: 30rem;
+    }
+}
+@include media-breakpoint-down(xs){
+    .blog__post{
+        min-height: 27rem;
+    }
+}
+@include media-breakpoint-up(xl){
+    .blog__post{
+        min-height: 20rem;
+    }
+  
+}

@@ -1,0 +1,13 @@
+@mixin raleway_light{
+    font-family: Raleway;
+    font-style: light;
+}
+@mixin post_bg{
+    background: {
+    origin: content-box;
+    size: cover;
+    repeat: no-repeat;
+    clip: content-box;
+    position: center;
+    }
+}

@@ -1,0 +1,71 @@
+//navbar stylization. Rest styles are in bootstrap scss files
+//navigation bar background chnaging to white
+@keyframes bgAnimWhite{
+    from{background-color: none;}
+    to{background-color: white;}
+}
+//navigation bar background chnaging to none
+@keyframes bgAnimNone{
+     from{background-color: white;}
+    to{background-color: none;}
+}
+@keyframes activeBtn{
+    from{width:0%;}
+    to{width: 100%;}
+}
+.nav-bg--white{
+    animation:{
+        name:bgAnimWhite;
+        duration:0.2s;
+        fill-mode:forwards;
+        timing-function:ease-in-out;
+    }
+}
+.nav-bg--none{
+    animation:{
+        name:bgAnimNone;
+        duration:0.2s;
+        fill-mode:forwards;
+        timing-function:ease-out;
+        direction: normal;
+    }
+}
+.nav-link{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    font:{
+        family: Raleway; 
+        size:1rem;
+        weight: bold;
+    }
+        &::before{
+        content: "";
+        height: 3px;
+        background-color:$orange;
+        display: block;
+        visibility: hidden;
+        padding-bottom: 3px;        
+    }
+}
+
+.active::before{
+    visibility: visible;
+     animation:{
+                name:activeBtn;
+                duration:0.8s;
+                fill-mode:forward;
+            }
+}
+@media(max-width:990px){
+.navbar-collapse{
+    background-color: white;
+}
+    .nav-link::before{display:none;}
+    .nav-link{text-align: center;
+    font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .navbar-nav{background-color: white;}
+}

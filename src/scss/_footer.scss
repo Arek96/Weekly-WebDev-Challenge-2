@@ -1,0 +1,37 @@
+footer{
+    background-color: #262626;
+    color: white;
+}
+.footer__h4{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.footer__logo{
+    font-family: Pacifico;
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+}
+.footer__signature{
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+.footer__strong{
+    color: #bd2946;
+}
+.footer__wraper{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+@include media-breakpoint-down(md){
+.footer__wraper{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &:first-of-type{
+        margin-bottom: 0;
+    }
+    &:last-of-type{
+        margin-top: 0;
+    }
+}
+}

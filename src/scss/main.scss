@@ -1,0 +1,39 @@
+/**
+*Importing bootstrap
+*/
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "\mixins";
+/**
+*Importing variables, mixins and sections scss files.
+*/
+@import "variables";
+@import "mixins";
+@import "nav";
+@import "home";
+@import "about";
+@import "services";
+@import "gallery";
+@import "subscribe";
+@import "blog";
+@import "contact";
+@import "footer";
+
+/**
+*Setting rem values for every media breakpoint.
+*/
+body, html{
+    height: 100%;
+    font-size: 16px;
+    @include raleway_light;
+}
+body{position:relative;}
+button{cursor: pointer;}
+@include media-breakpoint-down(sm){
+    html{font-size: 65%;}
+}
+@include media-breakpoint-only(md){
+    html{font-size: 80%;}
+}
+@include media-breakpoint-only(lg){
+    html{font-size: 90%;}
+}

@@ -1,0 +1,39 @@
+.about{
+    background:{
+        color:$about-color;   
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.about__img-wrap{
+    align-self: center;
+    
+}
+.about__img{
+    max-width: 100%;
+    
+    display: flex;
+    img{align-self: center;}
+}
+.about__info{
+    @include raleway_light;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+.about__h1{
+    font-size: 5.625rem;
+    font-family: Raleway;
+    font-weight: 600;
+}
+@include media-breakpoint-down(sm){
+    .about__info{
+        text-align: center;
+    }
+    .about__img{
+        max-height: 40vh;
+        margin: auto;
+    }
+}

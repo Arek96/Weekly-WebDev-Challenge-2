@@ -1,0 +1,78 @@
+.subscribe{
+    background-image: url(../img/subscribe_img.png);
+    background-position: center;
+    background-size: cover;
+    background-position: right;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.subscribe__h1{
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    text-shadow: 1px 1px  #fff;
+}
+.subscribe__p{
+    font-size: 1.5rem;
+    width: 85%;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px  #fff; 
+}
+.subscribe__input{
+    color: #262626;
+    font-size: 1.2rem;
+    background-color: none;
+    border: 1px #262626 solid; 
+    height: 50px;
+    width: 100%;
+    padding: 1rem;
+}
+
+.subscribe__button{
+    background-color:$subscribe-btn;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 100%;
+}
+
+@include media-breakpoint-only(md){
+    
+    .subscribe__input{
+        margin-top: 1rem;
+    }
+    .subscribe__button{
+        margin-top:3rem;
+    }
+    
+}
+@include media-breakpoint-down(sm){
+    .subscribe__h1{
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .subscribe__p{
+        text-align: center;
+        font-size: 1.7rem;
+        width: 100%;
+    }
+    .subscribe__input{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .subscribe__button{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+@include media-breakpoint-down(md){
+    .subscribe__h1{
+        color: #fff;
+        text-shadow: 1px 1px black;;
+    }
+    .subscribe__p{
+        color:#fff;
+        text-shadow: 1px 1px black;
+    }
+}
